@@ -3,14 +3,14 @@ import React, { useEffect, useState} from 'react'
 import './product.css'
 import ProductItem from '../productItem'
 
-const Product = ({ header, loadMore }) => {
+const Product = ({ header, loadMore }: {header: String, loadMore: Boolean}) => {
 
   const [ products, setProducts] = useState([]);
   const [ arrLen, setArrLen ] = useState(0);
   const [ isAllLoaded, setIsAllLoaded ] = useState(false);
   const [ isFetching, setIsFetching ] = useState(false)
 
-  const getData = async (limit) => {
+  const getData = async (limit: Number) => {
     try {
       setIsFetching(true)
       const response =  await fetch(`https://dummyjson.com/products?limit=${limit}`);

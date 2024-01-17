@@ -8,7 +8,8 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 
 const ProductDetail = () => {
-  const [ product, setProduct ] = useState(null)
+
+  const [ product, setProduct] = useState<any>(null)
   const router = useSearchParams()
   const id = router.get('id')
   
@@ -29,11 +30,12 @@ const ProductDetail = () => {
     getProduct()
   })
 
-  const addFavorite = (product) => {
+
+  const addFavorite = (product: any) => {
 
   }
 
-  const addToCart = (product) => {
+  const addToCart = (product: any) => {
 
   }
 
@@ -50,7 +52,7 @@ const ProductDetail = () => {
                 </div> 
                 <div className='thumbs'>
                     { 
-                      product?.images.map((item) => (
+                      product?.images.map((item: any) => (
                         <div className='thumb-div'>
                             <img src={item} alt=""/>
                         </div>

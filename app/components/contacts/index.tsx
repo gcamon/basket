@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Contact = ({ imgUrl, text }) => {
+const Contact = ({imgUrl, text}: {imgUrl: any, text: String}) => {
   return (
     <div>   
         <Image 
