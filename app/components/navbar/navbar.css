@@ -1,0 +1,95 @@
+.navbar-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 24px;
+    margin-right: 100px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-list > div {
+    margin-right: 15px;
+}
+
+.nav-list a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #737373;
+    margin-right: 5px;
+}
+
+.shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.register {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.register img {
+    margin-right: 5px;
+}
+
+.register-links a {
+    color: #23A6F0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.search div {
+    margin-right: 28px;
+    cursor: pointer;
+}
+
+.sub {
+    position: relative;
+}
+
+.sub span {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    color: #23A6F0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}

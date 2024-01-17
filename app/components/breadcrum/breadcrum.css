@@ -1,0 +1,19 @@
+.breadcrum-wrapper {
+    width: 79.4%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.breadcrum-wrapper span {
+    margin: 0 10px;
+    color: #BDBDBD;
+}
+
+.active-nav {
+    color: #BDBDBD;
+}
+

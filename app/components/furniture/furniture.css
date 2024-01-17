@@ -1,0 +1,48 @@
+.furniture-wrapper {
+    padding: 5px;
+    margin: 80px auto;
+    width: 75%;
+}
+
+.bg-img {
+    position: relative;
+}
+
+.bg-info {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 24px;
+}
+
+.bg-info span {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #2DC071;
+}
+
+.bg-info h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #252B42;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.bg-info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: #252B42;
+    text-transform: uppercase;
+    padding: 5px 0;
+}
+
+.bg-info a {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #252B42;
+}
