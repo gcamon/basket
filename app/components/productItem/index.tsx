@@ -5,7 +5,7 @@ import Link from 'next/link'
 import VisibilityIcon from '@mui/icons-material/Visibility'
 
 
-const ProductItem = ({imgURL, title, category, price, id}) => {
+const ProductItem = ({imgURL, title, category, price, id}: {imgURL: any, title: String, category: String, price: Number, id: any}) => {
   return (
     <div className='prod'>
         <div className='image-holder'>

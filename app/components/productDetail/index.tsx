@@ -6,12 +6,15 @@ import { useSearchParams } from 'next/navigation'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import { useDispatch } from 'react-redux'
+import { setCart, setFavorite } from '@/app/slices/userSlice'
 
 const ProductDetail = () => {
 
   const [ product, setProduct] = useState<any>(null)
   const router = useSearchParams()
   const id = router.get('id')
+  const dispatch = useDispatch();
   
   const getProduct = async () => {
     try {
@@ -28,15 +31,15 @@ const ProductDetail = () => {
   
   useEffect(() => {
     getProduct()
-  })
+  },[id]);
 
 
   const addFavorite = (product: any) => {
-
+    dispatch(setFavorite(product));
   }
 
   const addToCart = (product: any) => {
-
+    dispatch(setCart(product));
   }
 
   return (
@@ -52,8 +55,8 @@ const ProductDetail = () => {
                 </div> 
                 <div className='thumbs'>
                     { 
-                      product?.images.map((item: any) => (
-                        <div className='thumb-div'>
+                      product?.images.map((item: any, i: any) => (
+                        <div className='thumb-div' key={i}>
                             <img src={item} alt=""/>
                         </div>
                       ))

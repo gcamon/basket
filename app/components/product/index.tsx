@@ -63,7 +63,7 @@ const Product = ({ header, loadMore }: {header: String, loadMore: Boolean}) => {
             <div className={header === 'center' ? 'product-item grid grid-cols-5 gap-3' : 'product-item grid grid-cols-4 gap-3'}>
                 {
                   products.map(({thumbnail, title, price, category, id}) => (
-                    <ProductItem imgURL={thumbnail} title={title} price={price} category={category} id={id}/>
+                    <ProductItem imgURL={thumbnail} title={title} price={price} category={category} id={id} key={id}/>
                   ))
                 }
             </div>

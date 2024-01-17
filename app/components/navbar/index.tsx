@@ -2,12 +2,12 @@
 import React from 'react'
 import "./navbar.css"
 import Image from 'next/image'
-//import { useSelector, useDispatch } from 'react-redux'
-//import { selectCart, selectFavorite } from '@/slices/userSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectCart, selectFavorite } from '../../slices/userSlice'
 
 const NavBar = () => {
-  // const cart = useSelector(selectCart)
-  //console.log( "+++++++>>>", cart)
+  const cart = useSelector(selectCart);
+  const favorite = useSelector(selectFavorite)
   return (
     <div className='navbar-wrapper'>
        <div className='left-nav'>
@@ -59,7 +59,7 @@ const NavBar = () => {
                 height={16}
                 alt=''
               />
-              <span>1</span>
+              <span>{cart.length > 0 ? cart.length : ""}</span>
             </div>
             <div className='sub'>
               <Image
@@ -68,7 +68,7 @@ const NavBar = () => {
                 height={16}
                 alt=''
               /> 
-              <span>1</span>
+              <span>{favorite.length > 0 ? favorite.length : ""}</span>
             </div>            
          </div>
        </div>

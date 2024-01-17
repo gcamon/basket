@@ -11,10 +11,10 @@ export const userSlice = createSlice({
     initialState,
     reducers: {
         setCart: (state,action) => {
-            state.cart = state.cart.push(action.payload)
+            state.cart.push(action.payload)
         },
         setFavorite: (state,action) => {
-            state.favorite = state.favorite.push(action.payload)
+            state.favorite.push(action.payload)
         }
     }
 });

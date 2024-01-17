@@ -7,8 +7,8 @@ const TopNav = () => {
   return (
     <div className='topnav-wrapper'>
       <div className='top-nav-info'>
-        <Contact imgUrl={'/icons/phone-v.png'} text={'(225) 555-0118'} socials={false}/>       
-        <Contact imgUrl={'/icons/mail-v.png'} text={'michelle.rivera@example.com'} socials={false}/>
+        <Contact imgUrl={'/icons/phone-v.png'} text={'(225) 555-0118'}/>       
+        <Contact imgUrl={'/icons/mail-v.png'} text={'michelle.rivera@example.com'}/>
       </div>
       <div className='top-nav-info'>      
         <div>
@@ -34,11 +34,3 @@ const TopNav = () => {
 
 export default TopNav
 
-{/* <Image
-className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-src="/next.svg"
-alt="Next.js Logo"
-width={180}
-height={37}
-priority
-/> */}
