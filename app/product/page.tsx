@@ -4,6 +4,7 @@ import NavBar from '../components/navbar'
 import Product from '../components/product'
 import Breadcrum from '../components/breadcrum'
 import ProductDetail from '../components/productDetail'
+import AlertPallet from '../components/alertPallet'
 
 const ProductPage = () => {
   return (
@@ -15,6 +16,7 @@ const ProductPage = () => {
       <ProductDetail />
       </div>
       <Product header={"left"} loadMore={false}/>
+      <AlertPallet />
     </div>
   )
 }

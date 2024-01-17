@@ -7,7 +7,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined'
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined'
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import { useDispatch } from 'react-redux'
-import { setCart, setFavorite } from '@/app/slices/userSlice'
+import { setCart, setFavorite, setIsAddedCart, setIsAddedFavorite } from '../../slices/userSlice'
 
 const ProductDetail = () => {
 
@@ -36,10 +36,12 @@ const ProductDetail = () => {
 
   const addFavorite = (product: any) => {
     dispatch(setFavorite(product));
+    dispatch(setIsAddedCart(true))
   }
 
   const addToCart = (product: any) => {
     dispatch(setCart(product));
+    dispatch(setIsAddedFavorite(true));
   }
 
   return (
@@ -74,8 +76,8 @@ const ProductDetail = () => {
                     <Image src={'/icons/star-v.png'} width={18} height={18} alt="" />&nbsp;&nbsp;
                     <h6>10 Reviews</h6>
                 </div>
-                <h3 className='price'>{'$' + product?.price}</h3>
-                <h6 className='avail'>Availability : <span>In stock</span></h6>
+                <h3 className='price'>{'$' + product?.price.toString().replace( /\d{1,3}(?=(\d{3})+(?!\d))/g , "$&,")}</h3>
+                <h6 className='avail'>Availability : <span>{product?.stock } In stock</span></h6>
                 <hr/>
                 <div className='circle-area'>
                     <div className='circle' style={{backgroundColor: "#23A6F0"}}></div>
