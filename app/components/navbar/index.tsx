@@ -3,11 +3,21 @@ import React from 'react'
 import "./navbar.css"
 import Image from 'next/image'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectCart, selectFavorite } from '../../slices/userSlice'
+import { selectCart, selectFavorite, setIsOpenBar } from '../../slices/userSlice'
 
 const NavBar = () => {
-  const cart = useSelector(selectCart);
+  const cart = useSelector(selectCart)
   const favorite = useSelector(selectFavorite)
+  const dispatch = useDispatch()
+
+  const openCart = () => {
+    dispatch(setIsOpenBar(true))
+  }
+
+  const openFavorite = () => {
+    alert("sjhdsjjhs")
+  }
+
   return (
     <div className='navbar-wrapper'>
        <div className='left-nav'>
@@ -58,6 +68,7 @@ const NavBar = () => {
                 width={16}
                 height={16}
                 alt=''
+                onClick={() => openCart()}
               />
               <span>{cart.length > 0 ? cart.length : ""}</span>
             </div>
@@ -67,6 +78,7 @@ const NavBar = () => {
                 width={16}
                 height={16}
                 alt=''
+                onClick={() => openFavorite()}
               /> 
               <span>{favorite.length > 0 ? favorite.length : ""}</span>
             </div>            

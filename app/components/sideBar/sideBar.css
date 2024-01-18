@@ -1,0 +1,33 @@
+.sidebar-wrapper {
+    position: absolute;
+    right: 0;
+    top: 36px;
+    background-color: rgba(255,255,255,1);
+    width: 28%;
+    min-height: 100vh;
+    padding: 15px;
+    border-left: 1px solid #ccc;
+}
+
+.cart-div {
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-bar {
+    padding: 20px 5px;
+}

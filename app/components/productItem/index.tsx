@@ -21,7 +21,7 @@ const ProductItem = ({imgURL, title, category, price, id}: {imgURL: any, title: 
         <div className='product-details'>
           <h5>{title}</h5>
           <a href=''>{category}</a>
-          <h5><span>$16.48</span> &nbsp;<span className='price'>{`$${price}`}</span></h5>
+          <h5><span>$16.48</span> &nbsp;<span className='price'>{`${'$' + price.toString().replace( /\d{1,3}(?=(\d{3})+(?!\d))/g , "$&,")}`}</span></h5>
         </div>
     </div>
   )
